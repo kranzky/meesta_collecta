@@ -1,0 +1,53 @@
+<project>
+	<name>Meesta Collecta!</name>
+	<settings>
+		<defaultWidth>352</defaultWidth>
+		<defaultHeight>352</defaultHeight>
+		<workingDirectory>../assets</workingDirectory>
+	</settings>
+	<values>
+		<string name="title" default="Level 00" maxChars="8"/>
+        <text name="message" default="Level description..."/>
+        <integer name="time" default="0"/>
+	</values>
+	<tilesets>
+		<tileset name="tiles" image="free_tileset_version_10.png" tileWidth="32" tileHeight="32"/>
+	</tilesets>
+    <objects>
+        <folder name="gems">
+            <object name="blue" image="gem_blue.png" width="32" height="32" resizableX="true" resizableY="true"/>
+            <object name="green" image="gem_green.png" width="32" height="32" resizableX="true" resizableY="true"/>
+            <object name="orange" image="gem_orange.png" width="32" height="32" resizableX="true" resizableY="true"/>
+            <object name="purple" image="gem_purple.png" width="32" height="32" resizableX="true" resizableY="true"/>
+            <object name="red" image="gem_red.png" width="32" height="32" resizableX="true" resizableY="true"/>
+        </folder>
+        <object name="player" image="player.png" width="32" height="32" imageWidth="32" imageHeight="32" imageOffsetX="96" imageOffsetY="32" limit="1"/>
+        <object name="door" image="door.png" width="32" height="32" imageWidth="32" imageHeight="32"/>
+        <object name="key" image="key.png" width="32" height="32"/>
+        <object name="button" image="button.png" width="32" height="32" imageWidth="32" imageHeight="32">
+            <values>
+                <integer name="block_id" default="0"/>
+                <number name="release" default="0.0"/>
+            </values>
+        </object>
+        <object name="block" image="block.png" width="32" height="32">
+            <values>
+                <integer name="id" default="0"/>
+                <number name="delay" default="0.0"/>
+            </values>
+            <nodes drawObject="true" limit="2" lineMode="1"/>
+        </object>
+    </objects>
+	<layers>
+		<tiles name="background" gridSize="32"/>
+        <grid name="collision" gridSize="32" exportAsObjects="true"/>
+		<tiles name="scenery" gridSize="32"/>
+        <objects name="actors" gridSize="32"/>
+        <objects name="gems_1" gridSize="32"/>
+        <objects name="gems_2" gridSize="32"/>
+        <objects name="gems_3" gridSize="32"/>
+        <objects name="gems_4" gridSize="32"/>
+        <objects name="gems_5" gridSize="32"/>
+		<tiles name="foreground" gridSize="32"/>
+	</layers>
+</project>
